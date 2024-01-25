@@ -1,10 +1,19 @@
 using ExamHuseyn.DAL;
+using ExamHuseyn.Models;
+using ExamHuseyn.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<LayoutService>();
+builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
+{
+    
+
+}).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("mssql"));

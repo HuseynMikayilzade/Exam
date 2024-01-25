@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExamHuseyn")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+735a544323028014940212befb57d36b49eb7f56")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExamHuseyn")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExamHuseyn")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

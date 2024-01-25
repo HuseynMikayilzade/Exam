@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using ExamHuseyn.Services
+@inject LayoutService service
+@{
+    Dictionary<string, string> setting = await service.GetSettings();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -41,7 +47,7 @@
         <div class="container d-flex align-items-center">
 
             <div class="logo me-auto">
-                <h1><a href="index.html">Lumia</a></h1>
+                <h1><a asp-action="index" asp-controller="home">@setting["Logo"]</a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="~/assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
@@ -73,20 +79,33 @@
                         </ul>
                     </li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a class="nav-link scrollto">@User.Identity.Name</a></li>
+                        <li><a class="nav-link scrollto" asp-action="logout" asp-controller="account" asp-area="manage">Logout</a></li>
+                        <li><a class="nav-link scrollto" asp-action="index" asp-controller="dashboard" asp-area="manage">Dashboard</a></li>
+
+                    }
+                    else
+                    {
+                        <li><a class="nav-link scrollto" asp-action="login" asp-controller="account" asp-area="manage">Login</a></li>
+                        <li><a class="nav-link scrollto" asp-action="register" asp-controller="account" asp-area="manage">Register</a></li>
+                    }
+
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
 
             <div class="header-social-links d-flex align-items-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+                @Html.Raw(setting["Insta"])
+                @Html.Raw(setting["Fb"])
+                @Html.Raw(setting["Twitter"])
+                @Html.Raw(setting["LinkIn"])
             </div>
 
         </div>
     </header><!-- End Header -->
- @RenderBody()
+    @RenderBody()
     <!-- ======= Footer ======= -->
     <footer id="footer">
 
@@ -97,11 +116,9 @@
                     <div class="col-lg-3 col-md-6 footer-contact">
                         <h3>Lumia</h3>
                         <p>
-                            A108 Adam Street <br>
-                            New York, NY 535022<br>
-                            United States <br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            <strong>Location: </strong>@setting["Location"] <br>
+                            <strong>Phone: </strong>@setting["Phone"] <br>
+                            <strong>Email: </strong>@setting["Email"] <br>
                         </p>
                     </div>
 
@@ -154,11 +171,11 @@
                 </div>
             </div>
             <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                @Html.Raw(setting["Insta"])
+                @Html.Raw(setting["Fb"])
+                @Html.Raw(setting["Twitter"])
+                @Html.Raw(setting["LinkIn"])
+                @Html.Raw(setting["Skype"])
             </div>
         </div>
     </footer><!-- End Footer -->
