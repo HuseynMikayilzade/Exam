@@ -7,9 +7,14 @@
         <div class="card-body">
 
             <form class="forms-sample" method="post" enctype="multipart/form-data">
+
                 <div class="form-group">
                     <img style="width:200px;height:200px;" src="~/assets/img/team/@Model.Image" alt="">
-                    <input asp-for="Image" type="hidden" >
+                    <input asp-for="Image" type="hidden">
+
+                </div>
+                <div class="form-group">
+
                     <label asp-for="Photo">Photo</label>
                     <input asp-for="Photo" class="form-control" placeholder="Photo">
                     <span asp-validation-for="Photo"></span>
@@ -47,7 +52,7 @@
                     <input asp-for="Twitter" class="form-control" placeholder="Twitter">
                     <span asp-validation-for="Twitter"></span>
 
-                </div>    
+                </div>
                 <div class="form-group">
                     <label asp-for="PositionId">Position</label>
                     <select asp-for="PositionId" class="form-control" placeholder="Photo" asp-items="new SelectList(Model.Positions,nameof(Position.Id),nameof(Position.Name))">

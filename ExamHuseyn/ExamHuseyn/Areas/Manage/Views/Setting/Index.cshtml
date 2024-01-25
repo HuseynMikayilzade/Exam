@@ -1,6 +1,6 @@
 ﻿@using ExamHuseyn.Areas.Manage.ViewModels
 @using ExamHuseyn.Models
-@model PaginationVm<Employee>
+@model PaginationVm<Setting>
 @{
     int count = (Model.CurrentPage - 1) * 3;
 }
@@ -8,8 +8,7 @@
     <div class="card">
         <div class="card-body">
             <div class="container d-flex">
-                <div class="col-6">
-                    <a asp-action="create" asp-controller="employee"><button type="button" class="btn btn-success btn-rounded btn-fw">Create</button></a>
+                <div class="col-4">
                 </div>
                 <div class="col-6">
                     <nav aria-label="...">
@@ -26,8 +25,8 @@
                         </ul>
                     </nav>
                 </div>
-
             </div>
+
             <div class="table-responsive pt-3">
                 <table class="table table-dark">
                     <thead>
@@ -36,14 +35,12 @@
                                 #
                             </th>
                             <th>
-                                Fullname
+                                Key
                             </th>
                             <th>
-                                Position
+                                Value
                             </th>
-                            <th>
-                                Image
-                            </th>
+
                             <th>
                                 Settings
                             </th>
@@ -58,17 +55,14 @@
                                     @(++count)
                                 </td>
                                 <td>
-                                    @item.FullName
+                                    @item.Key
                                 </td>
                                 <td>
-                                    @item.Position.Name
+                                    @item.Value
                                 </td>
                                 <td>
-                                    <img style="width:200px;height:200px;" src="~/assets/img/team/@item.Image" alt="">
-                                </td>
-                                <td>
-                                    <a asp-action="update" asp-controller="employee" asp-route-id="@item.Id"><button type="button" class="btn btn-info btn-rounded btn-fw">Update</button></a>
-                                    <a asp-action="delete" asp-controller="employee" asp-route-id="@item.Id"><button type="button" class="btn btn-danger btn-rounded btn-fw">Delete</button></a>
+                                    <a asp-action="update" asp-controller="setting" asp-route-id="@item.Id"><button type="button" class="btn btn-info btn-rounded btn-fw">Update</button></a>
+                                    <a asp-action="delete" asp-controller="setting" asp-route-id="@item.Id"><button type="button" class="btn btn-danger btn-rounded btn-fw">Delete</button></a>
                                 </td>
                             </tr>
                         }
