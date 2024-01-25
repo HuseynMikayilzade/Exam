@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ca.r214.18\\Desktop\\Exam\\ExamHuseyn\\ExamHuseyn\\ExamHuseyn.csproj": {}
+    "C:\\Users\\ca.r214.09\\Desktop\\Exam\\ExamHuseyn\\ExamHuseyn\\ExamHuseyn.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ca.r214.18\\Desktop\\Exam\\ExamHuseyn\\ExamHuseyn\\ExamHuseyn.csproj": {
+    "C:\\Users\\ca.r214.09\\Desktop\\Exam\\ExamHuseyn\\ExamHuseyn\\ExamHuseyn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ca.r214.18\\Desktop\\Exam\\ExamHuseyn\\ExamHuseyn\\ExamHuseyn.csproj",
+        "projectUniqueName": "C:\\Users\\ca.r214.09\\Desktop\\Exam\\ExamHuseyn\\ExamHuseyn\\ExamHuseyn.csproj",
         "projectName": "ExamHuseyn",
-        "projectPath": "C:\\Users\\ca.r214.18\\Desktop\\Exam\\ExamHuseyn\\ExamHuseyn\\ExamHuseyn.csproj",
-        "packagesPath": "C:\\Users\\ca.r214.18\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ca.r214.18\\Desktop\\Exam\\ExamHuseyn\\ExamHuseyn\\obj\\",
+        "projectPath": "C:\\Users\\ca.r214.09\\Desktop\\Exam\\ExamHuseyn\\ExamHuseyn\\ExamHuseyn.csproj",
+        "packagesPath": "C:\\Users\\ca.r214.09\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ca.r214.09\\Desktop\\Exam\\ExamHuseyn\\ExamHuseyn\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ca.r214.18\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ca.r214.09\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,6 +57,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.14, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             }
           },
           "imports": [
@@ -78,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
